@@ -2,7 +2,6 @@ import math
 import torch
 from torch.autograd import Variable
 from model.utils.config import cfg
-from bbox_transform import bbox_overlaps, bbox_transform_inv
 
 
 def IoG(box_a, box_b):

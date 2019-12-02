@@ -2,6 +2,7 @@ import math
 import torch
 from torch.autograd import Variable
 from model.utils.config import cfg
+from .bbox_transform import bbox_overlaps, bbox_transform_inv
 
 
 def IoG(box_a, box_b):
@@ -16,8 +17,7 @@ def IoG(box_a, box_b):
     return I / G
 
 
-
-def repgt(pred_boxes, gt_rois, rois_inside_ws):
+def repgt(pred_boxes, rois_inside_ws):
     if not cfg.TRAIN.USE_GT:
         return 0
     sigma_repgt = 0.9
@@ -51,7 +51,7 @@ def repgt(pred_boxes, gt_rois, rois_inside_ws):
     return loss_repgt
 
 
-def repbox(pred_boxes, gt_rois, rois_inside_ws):
+def repbox(pred_boxes, rois_inside_ws):
     if not cfg.TRAIN.USE_GT:
         return 0
     sigma_repbox = 0
@@ -92,8 +92,6 @@ def repulsion(rois, box_deltas, rois_inside_ws, rois_outside_ws):
     deltas = Variable(box_deltas.view(rois.shape[0], 256, 4))
     rois_inside_ws = Variable(rois_inside_ws.view(rois.shape[0], 256, 4))
     rois_outside_ws = Variable(rois_outside_ws.view(rois.shape[0], 256, 4))
-    if int(torch.sum(rois_outside_ws == rois_inside_ws)) != 1024:
-        pass
     for i in range(rois.shape[0]):
         deltas[i] = deltas[i].view(-1, 4) * torch.FloatTensor(cfg.TRAIN.BBOX_NORMALIZE_STDS).cuda() + \
                     torch.FloatTensor(cfg.TRAIN.BBOX_NORMALIZE_MEANS).cuda()

@@ -16,6 +16,7 @@ def IoG(box_a, box_b):
     return I / G
 
 
+
 def repgt(pred_boxes, gt_rois, rois_inside_ws):
     if not cfg.TRAIN.USE_GT:
         return 0

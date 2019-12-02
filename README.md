@@ -53,7 +53,7 @@ python trainval_net.py --dataset pascal_voc --net vgg16 --bs 4 --nw 1 --cuda
 * dataset can be changed to pascal_voc_0712 for PASCAL VOC 2012
 
 # Model download
-For testing the model [download]() the pre-trained weights and store it in `models/vgg16/pascal_voc/faster_rcnn_1_10_2504.pth`
+For testing the model [download](https://rep-loss-model.s3.amazonaws.com/faster_rcnn_1_10_2504.pth) the pre-trained weights and store it in `models/vgg16/pascal_voc/faster_rcnn_1_10_2504.pth`
 # Testing
 ```sh
 python test_net.py --net vgg16 --checksession 1 --checkepoch 10 --checkpoint 2504

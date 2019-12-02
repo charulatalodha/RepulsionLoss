@@ -2,6 +2,7 @@
 cd lib
 sh make.sh
 cd ..
+mkdir data
 cd data
 sh voc2007.sh
 mv VOCdevkit/ VOCdevkit2007/

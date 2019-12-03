@@ -1,6 +1,14 @@
 # Repulsion Loss
 
-This repository implements the code for [Repulsion Loss: Detecting pedestrians in a crowd]([https://arxiv.org/pdf/1711.07752v2.pdf](https://arxiv.org/pdf/1711.07752v2.pdf))
+This repository implements the code for [Repulsion Loss: Detecting pedestrians in a crowd]([https://arxiv.org/pdf/1711.07752v2.pdf](https://arxiv.org/pdf/1711.07752v2.pdf)). This page(code, project and presentation) is the submission for Group B for final project for the course CS 256: Topics in Aritificial Intelligence, Section 2 led by Prof. Mashhour Soul, PhD.
+The group members include: 
+* [Vidish Naik] (mailto:vidish.naik@sjsu.edu)
+* [Joel Alvares] (mailto:joel.alvares@sjsu.edu)
+* [Charulata Lodha] (mailto:charulata.lodha@sjsu.edu)
+* [Rakesh Nagaraju] (mailto:rakesh.nagaraju@sjsu.edu)
+
+The code maybe used for educational and commercial use under no warranties. 
+For questions on this project and code please reach out to: `Vidish Naik` at `vidish.naik@sjsu.edu`
 
 # Requirements:
 * PyTorch: 0.4.0
@@ -56,7 +64,7 @@ python trainval_net.py --dataset pascal_voc --net vgg16 --bs 4 --nw 1 --cuda
 For testing the model [download](https://rep-loss-model.s3.amazonaws.com/faster_rcnn_1_10_2504.pth) the pre-trained weights and store it in `models/vgg16/pascal_voc/faster_rcnn_1_10_2504.pth`
 # Testing
 ```sh
-python test_net.py --net vgg16 --checksession 1 --checkepoch 10 --checkpoint 2504
+python test_net.py --net vgg16 --checksession 1 --checkepoch 10 --checkpoint 2504 --cuda
 ```
-
-Thanks to AWS for providing the credits
+# Credits
+This project was conducted with free credits provided by AWS educate team.

@@ -66,5 +66,10 @@ For testing the model [download](https://rep-loss-model.s3.amazonaws.com/faster_
 ```sh
 python test_net.py --net vgg16 --checksession 1 --checkepoch 10 --checkpoint 2504 --cuda
 ```
+# Demo
+Store the images that you need to run in the images folder. New images with detections will be stored in the same folder
+```sh
+!python demo.py --cuda --load_dir models --net vgg16 --checksession 1 --checkepoch 10 --checkpoint 2504
+```
 # Credits
 This project was conducted with free credits provided by AWS educate team.

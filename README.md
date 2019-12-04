@@ -1,6 +1,6 @@
 # Repulsion Loss
 
-This repository implements the code for [Repulsion Loss: Detecting pedestrians in a crowd]([https://arxiv.org/pdf/1711.07752v2.pdf](https://arxiv.org/pdf/1711.07752v2.pdf)). This page(code, project and presentation) is the submission for Group B for final project for the course CS 256: Topics in Aritificial Intelligence, Section 2 led by Prof. Mashhour Soul, PhD.
+This repository implements the code for [Repulsion Loss: Detecting pedestrians in a crowd]([https://arxiv.org/pdf/1711.07752v2.pdf](https://arxiv.org/pdf/1711.07752v2.pdf)). This page(code, project and presentation) is the submission for Group B for final project for the course CS 256: Topics in Artificial Intelligence, Section 2 led by Prof. Mashhour Soul, PhD.
 The group members include: 
 * [Vidish Naik](mailto:vidish.naik@sjsu.edu)
 * [Joel Alvares](mailto:joel.alvares@sjsu.edu)
